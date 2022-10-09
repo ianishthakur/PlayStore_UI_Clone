@@ -3,6 +3,8 @@ import 'package:playstore_ui/common/commonTextField/app_Model.dart';
 import 'package:playstore_ui/common/constant/assets.dart';
 import 'package:playstore_ui/common/searchPage.dart';
 import 'package:playstore_ui/common/constant/strings.dart';
+import 'package:playstore_ui/pages/example.dart';
+import 'package:playstore_ui/pages/google_Acc.dart';
 import '../common/commonTextField/appsListTextField.dart';
 import '../common/commonTextField/tab_Bar_View.dart';
 import '../common/commonTextField/tab_bar.dart';
@@ -39,122 +41,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               length: 4,
               child: NestedScrollView(
                 headerSliverBuilder: (context, value) {
-                  return [
-                    SliverAppBar(
-                      leadingWidth: 0,
-                      elevation: 0.5,
-                      pinned: true,
-                      floating: true,
-                      snap: true,
-                      bottom: TabBar(
-                        isScrollable: true,
-                        controller: _tabController,
-                        indicatorWeight: 3,
-                        indicatorSize: TabBarIndicatorSize.label,
-                        tabs: const [
-                          Tab(
-                            child: Text(
-                              Strings.forYou,
-                              style: TextStyle(
-                                color: Colors.black,
-                              ),
-                            ),
-                          ),
-                          Tab(
-                            child: Text(Strings.topCharts,
-                                style: TextStyle(
-                                  color: Colors.black,
-                                )),
-                          ),
-                          Tab(
-                            child: Text(Strings.kids,
-                                style: TextStyle(
-                                  color: Colors.black,
-                                )),
-                          ),
-                          Tab(
-                            child: Text(Strings.categories,
-                                style: TextStyle(
-                                  color: Colors.black,
-                                )),
-                          )
-                        ],
-                      ),
-                      backgroundColor: Colors.white,
-                      title: Center(
-                        child: Container(
-                          height: 42,
-                          width: 320,
-                          decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 227, 236, 244),
-                              borderRadius: BorderRadius.circular(40)),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                  margin: EdgeInsets.only(left: 6),
-                                  child: IconButton(
-                                      onPressed: () {
-                                        showSearch(
-                                            context: context,
-                                            delegate: SearchApp());
-                                      },
-                                      icon: const Icon(
-                                        Icons.search,
-                                        color: Colors.black87,
-                                      ))),
-                              Container(
-                                margin: EdgeInsets.only(right: 6),
-                                width: 180,
-                                child: InkWell(
-                                  onTap: () {
-                                    showSearch(
-                                        context: context,
-                                        delegate: SearchApp());
-                                  },
-                                  child: const Text(
-                                    // overflow: TextOverflow.ellipsis,
-                                    Strings.search,
-                                    style: TextStyle(color: Colors.black54),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                margin: const EdgeInsets.only(right: 14),
-                                child: InkWell(
-                                  onTap: () {
-                                    Navigator.pushNamed(
-                                        context, Routes.googleMic);
-                                  },
-                                  child: const Icon(
-                                    Icons.mic_none_outlined,
-                                    color: Colors.black87,
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                margin: const EdgeInsets.only(right: 10),
-                                width: 32,
-                                height: 38,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(50),
-                                ),
-                                child: InkWell(
-                                  onTap: () {
-                                    Navigator.pushNamed(
-                                        context, Routes.googleAcc);
-                                  },
-                                  child: Image.asset(
-                                    Assets.profile,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ];
+                  return [Example(tabController: _tabController)];
                 },
                 body: TabBarView(
                   controller: _tabController,
