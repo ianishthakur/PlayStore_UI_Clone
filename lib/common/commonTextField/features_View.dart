@@ -16,7 +16,7 @@ class FeaturesView extends StatelessWidget {
               icon: Icons.apps,
               text: Text(
                 Strings.feaManage,
-                style: TextStyle(color: Colors.black87),
+                style: TextStyle(color: Colors.black87, fontSize: 14),
               ),
             )),
         SizedBox(
@@ -28,7 +28,7 @@ class FeaturesView extends StatelessWidget {
               icon: Icons.notifications_outlined,
               text: Text(
                 Strings.feaOffers,
-                style: TextStyle(color: Colors.black87),
+                style: TextStyle(color: Colors.black87, fontSize: 14),
               ),
             )),
         SizedBox(
@@ -40,7 +40,7 @@ class FeaturesView extends StatelessWidget {
               icon: Icons.credit_card,
               text: Text(
                 Strings.feaPayment,
-                style: TextStyle(color: Colors.black87),
+                style: TextStyle(color: Colors.black87, fontSize: 14),
               ),
             )),
         SizedBox(
@@ -52,7 +52,7 @@ class FeaturesView extends StatelessWidget {
               icon: Icons.security_rounded,
               text: Text(
                 Strings.feaplay,
-                style: TextStyle(color: Colors.black87),
+                style: TextStyle(color: Colors.black87, fontSize: 14),
               ),
             )),
         SizedBox(
@@ -64,7 +64,7 @@ class FeaturesView extends StatelessWidget {
               icon: Icons.folder_open,
               text: Text(
                 Strings.feaLibrary,
-                style: TextStyle(color: Colors.black87),
+                style: TextStyle(color: Colors.black87, fontSize: 14),
               ),
             )),
         SizedBox(
@@ -76,7 +76,7 @@ class FeaturesView extends StatelessWidget {
               icon: Icons.extension_outlined,
               text: Text(
                 Strings.feaPlayPass,
-                style: TextStyle(color: Colors.black87),
+                style: TextStyle(color: Colors.black87, fontSize: 14),
               ),
             )),
         SizedBox(
@@ -88,7 +88,7 @@ class FeaturesView extends StatelessWidget {
               icon: Icons.settings_outlined,
               text: Text(
                 Strings.feaSettings,
-                style: TextStyle(color: Colors.black87),
+                style: TextStyle(color: Colors.black87, fontSize: 14),
               ),
             )),
         SizedBox(
@@ -101,9 +101,9 @@ class FeaturesView extends StatelessWidget {
               text: Text(
                 Strings.feaHelp,
                 style: TextStyle(
-                  color: Colors.black87,
-                  fontWeight: FontWeight.w400,
-                ),
+                    color: Colors.black87,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 14),
               ),
             )),
       ],

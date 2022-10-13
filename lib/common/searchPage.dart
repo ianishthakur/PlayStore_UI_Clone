@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 
+import '../pages/google_mic.dart';
 import 'constant/strings.dart';
 
 class SearchApp extends SearchDelegate {
@@ -22,7 +23,9 @@ class SearchApp extends SearchDelegate {
   List<Widget> buildActions(BuildContext context) {
     return [
       IconButton(
-        onPressed: () {},
+        onPressed: () {
+          showVoiceDialog(context);
+        },
         icon: Icon(
           Icons.mic_none_outlined,
           color: Colors.black54,
@@ -57,6 +60,28 @@ class SearchApp extends SearchDelegate {
         title: Text(suggestList[index]),
       ),
       itemCount: suggestList.length,
+    );
+  }
+
+  showVoiceDialog(BuildContext context) {
+    // set up the ProfileDialog
+    AlertDialog searchVoiceAlert = AlertDialog(
+      insetPadding: EdgeInsets.only(right: 6, left: 6, top: 40),
+      titlePadding: EdgeInsets.zero,
+      scrollable: true,
+      title: GestureDetector(
+          onVerticalDragDown: (details) {
+            Navigator.of(context).pop();
+          },
+          child: const GoogleMic()),
+    );
+
+    // show the dialog
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return searchVoiceAlert;
+      },
     );
   }
 }

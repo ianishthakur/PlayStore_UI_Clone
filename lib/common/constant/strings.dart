@@ -67,3 +67,5 @@ class Strings {
   static const tryAgain = "Try again";
   static const micEng = "English (United States)";
 }
+
+

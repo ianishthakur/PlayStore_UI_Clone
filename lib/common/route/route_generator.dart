@@ -13,7 +13,7 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => SplashPage());
 
       case Routes.home:
-        return MaterialPageRoute(builder: (_) => HomeScreen());
+        return MaterialPageRoute(builder: (_) => HomeScreen(  ));
       case Routes.googleAcc:
         return MaterialPageRoute(builder: (_) => GoogleAcc());
       case Routes.googleMic:

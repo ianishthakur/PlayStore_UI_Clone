@@ -14,19 +14,20 @@ class FeaturesList extends StatelessWidget {
           child: Row(
             children: [
               Container(
-                padding: EdgeInsets.only(bottom: 8),
+                margin: EdgeInsets.only(bottom: 10),
                 width: 40,
-                height: 25,
+                height: 15,
                 child: Icon(
                   icon,
-                  color: Colors.black87,
-                  size: 20,
+                  color: Color.fromARGB(255, 71, 71, 71),
+                  size: 22,
                 ),
               ),
               SizedBox(
                 width: 10,
               ),
               Container(
+                padding: EdgeInsets.only(top: 2),
                 height: 25,
                 width: 260,
                 child: text,

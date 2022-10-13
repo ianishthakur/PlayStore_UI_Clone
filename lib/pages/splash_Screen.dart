@@ -26,9 +26,7 @@ class _SplashPageState extends State<SplashPage> {
     final splashWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Container(
-        // decoration: BoxDecoration(
-        //   shape: BoxShape.circle
-        //   ,borderRadius: BorderRadius.circular(20)),
+       
         width: splashWidth,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
