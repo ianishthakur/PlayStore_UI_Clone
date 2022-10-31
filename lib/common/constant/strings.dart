@@ -43,7 +43,9 @@ class Strings {
   static const recommended = "Recommended";
   static const suggested = "Suggested";
   static const low = "Lowspace";
-
+  static const datarecom = "recommended";
+  static const datasugg = "suggested";
+  static const datalow = "lowspace";
   //google acc details
   static const accName = "Demo User";
   static const googleAcc = "Google Account";
@@ -66,6 +68,30 @@ class Strings {
   static const micAgain = "again.";
   static const tryAgain = "Try again";
   static const micEng = "English (United States)";
+
+  //URLs
+  static const urlFb =
+      "https://www.freepnglogos.com/uploads/facebook-logo-icon/facebook-logo-icon-file-facebook-icon-svg-wikimedia-commons-4.png";
+  static const urlUdemy =
+      'https://play-lh.googleusercontent.com/dsCkmJE2Fa8IjyXERAcwc5YeQ8_NvbZ4_OI8LgqyjILpXUfS5YhEcnAMajKPrZI-og';
+
+  static const urlGoogleMeet =
+      'https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Meet.max-1100x1100.png';
+
+  static const urlGoogleSheet =
+      "https://esewa.com.np/common/images/esewa-icon-large.png";
+  static const urlAlibaba =
+      'https://brandslogos.com/wp-content/uploads/images/large/alibaba-com-logo.png';
+  static const urlEsewa =
+      'https://esewa.com.np/common/images/esewa-icon-large.png';
+  static const urlLightroom =
+      'https://play-lh.googleusercontent.com/RGvuFCqPOIiR1i9QDN6-HNt5nOuWj4zuqQduxnJn0ughdo-yhAJNG1r6W1A3Fc6Z9w';
+  static const urlWhatsapp =
+      'https://cdn-icons-png.flaticon.com/512/124/124034.png?w=360';
+  static const urlTwitter =
+      'https://help.twitter.com/content/dam/help-twitter/brand/logo.png';
+  static const urlInstagram =
+      "https://www.freepnglogos.com/uploads/logo-ig-png/logo-ig-instagram-new-logo-vector-download-13.png";
+  static const urlMicrosoft =
+      "https://www.freepnglogos.com/uploads/microsoft-logo-image-23.png";
 }
-
-

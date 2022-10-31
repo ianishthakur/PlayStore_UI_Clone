@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:playstore_ui/common/commonTextField/app_Model.dart';
-import 'package:playstore_ui/common/constant/assets.dart';
-import 'package:playstore_ui/common/searchPage.dart';
+import 'package:playstore_ui/common/commonTextField/model/app_Model.dart';
 import 'package:playstore_ui/common/constant/strings.dart';
 
-import 'package:playstore_ui/pages/google_Acc.dart';
-import '../common/commonTextField/appsListTextField.dart';
-import '../common/commonTextField/homepage_utils.dart';
-import '../common/commonTextField/tab_bar.dart';
-import '../common/commonTextField/tab_bar_view.dart';
-import '../common/route/routes.dart';
+import '../common/commonTextField/model/appsListTextField.dart';
+import '../common/commonTextField/tabBar/tab_bar.dart';
+import '../common/commonTextField/tabBar/tab_bar_view.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -105,17 +100,17 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   List<SuggestedList> sugglist = [];
   checkType(apps) {
     apps.forEach((e) {
-      if (e.dataType == "recommended") {
+      if (e.dataType == Strings.datarecom) {
         setState(() {
           recomlist.add(
               RecomendedList(imagee: e.imagee, name: e.name, rating: e.rating));
         });
-      } else if (e.dataType == "lowspace") {
+      } else if (e.dataType == Strings.datalow) {
         setState(() {
           lowlist.add(
               LowSpaceList(imagee: e.imagee, name: e.name, rating: e.rating));
         });
-      } else if (e.dataType == "suggested") {
+      } else if (e.dataType == Strings.datasugg) {
         setState(() {
           sugglist.add(
               SuggestedList(imagee: e.imagee, name: e.name, rating: e.rating));

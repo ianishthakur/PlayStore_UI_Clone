@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:playstore_ui/common/commonTextField/google_Acc_Features/features.dart';
+import 'package:playstore_ui/common/commonTextField/google_Acc_Features/features_view.dart';
 import 'package:playstore_ui/common/constant/assets.dart';
 import 'package:playstore_ui/common/constant/strings.dart';
 import 'package:playstore_ui/common/route/routes.dart';
 import 'package:playstore_ui/common/searchPage.dart';
 import 'package:playstore_ui/pages/google_Acc.dart';
 import 'package:playstore_ui/pages/google_mic.dart';
+
+import '../../utils/google_Acc_utils.dart';
+import '../model/feature_Model.dart';
 
 class TabBarScreen extends StatelessWidget {
   const TabBarScreen({Key? key, required this.tabController}) : super(key: key);
@@ -63,7 +68,6 @@ class TabBarScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                
                   margin: EdgeInsets.only(left: 6),
                   child: IconButton(
                       onPressed: () {
@@ -122,45 +126,38 @@ class TabBarScreen extends StatelessWidget {
   }
 
   showProfileDialog(BuildContext context) {
-    // set up the ProfileDialog
-    AlertDialog profileAlert = AlertDialog(
-      insetPadding: EdgeInsets.only(right: 6, left: 6, top: 40),
-      titlePadding: EdgeInsets.zero,
-      scrollable: false,
-      title: GestureDetector(
-          onVerticalDragDown: (details) {
-            // Navigator.of(context).pop();
-          },
-          child: const GoogleAcc()),
-    );
-
-    // show the dialog
-    showDialog(
+    return showDialog(
       context: context,
       builder: (BuildContext context) {
-        return profileAlert;
+        return AlertDialog(
+          insetPadding: EdgeInsets.only(right: 6, left: 6, top: 40),
+          titlePadding: EdgeInsets.zero,
+          scrollable: false,
+          title: GestureDetector(
+              onVerticalDragDown: (details) {
+                // Navigator.of(context).pop();
+              },
+              child: GoogleAcc()),
+        );
       },
     );
   }
 
   showVoiceDialog(BuildContext context) {
-    // set up the ProfileDialog
-    AlertDialog voiceAlert = AlertDialog(
-      insetPadding: EdgeInsets.only(right: 6, left: 6, top: 40),
-      titlePadding: EdgeInsets.zero,
-      scrollable: true,
-      title: GestureDetector(
-          onVerticalDragDown: (details) {
-            Navigator.of(context).pop();
-          },
-          child: const GoogleMic()),
-    );
-
-    // show the dialog
-    showDialog(
+    return showDialog(
       context: context,
       builder: (BuildContext context) {
-        return voiceAlert;
+        return AlertDialog(
+          insetPadding: EdgeInsets.only(right: 6, left: 6, top: 40),
+          titlePadding: EdgeInsets.zero,
+          scrollable: true,
+          title: GestureDetector(
+              onVerticalDragDown: (details) {
+                Navigator.of(context).pop();
+              },
+              child: const GoogleMic()),
+        );
+        ;
       },
     );
   }

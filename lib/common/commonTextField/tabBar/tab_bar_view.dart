@@ -4,20 +4,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-import '../constant/strings.dart';
+import '../../constant/strings.dart';
 
 class TabViewBarScreen extends StatelessWidget {
-  const TabViewBarScreen({Key? key, required this.recomlist, required this.sugglist, required this.lowlist})
+  const TabViewBarScreen(
+      {Key? key,
+      required this.recomlist,
+      required this.sugglist,
+      required this.lowlist})
       : super(key: key);
 
- 
   final List<dynamic> recomlist;
   final List<dynamic> sugglist;
-final List<dynamic> lowlist;
+  final List<dynamic> lowlist;
 
   @override
   Widget build(BuildContext context) {
-   
     return SingleChildScrollView(
       child: Padding(
         padding: EdgeInsets.all(10.0),
@@ -25,7 +27,7 @@ final List<dynamic> lowlist;
           children: [
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+              children: const [
                 ListTile(
                   title: Text(
                     Strings.recommended,
@@ -82,7 +84,8 @@ final List<dynamic> lowlist;
       ),
     );
   }
-   Widget buildListView(List apps) {
+
+  Widget buildListView(List apps) {
     return ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: apps.length,
@@ -100,9 +103,7 @@ final List<dynamic> lowlist;
                 Container(
                   margin: EdgeInsets.only(top: 10),
                   width: double.infinity,
-                  height: 20,
                   child: Text(
-                    // overflow: TextOverflow.ellipsis,
                     apps[index].name,
                     style: TextStyle(fontSize: 12),
                     textAlign: TextAlign.start,

@@ -8,6 +8,7 @@ import '../../pages/splash_Screen.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
+    
     switch (settings.name) {
       case Routes.root:
         return MaterialPageRoute(builder: (_) => SplashPage());

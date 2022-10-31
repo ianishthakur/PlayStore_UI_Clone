@@ -4,10 +4,12 @@ class FeaturesList extends StatelessWidget {
   const FeaturesList({Key? key, required this.icon, required this.text})
       : super(key: key);
   final IconData icon;
-  final Widget text;
+  final String text;
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
           margin: EdgeInsets.only(left: 15),
@@ -16,7 +18,7 @@ class FeaturesList extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(bottom: 10),
                 width: 40,
-                height: 15,
+                height: 25,
                 child: Icon(
                   icon,
                   color: Color.fromARGB(255, 71, 71, 71),
@@ -29,8 +31,8 @@ class FeaturesList extends StatelessWidget {
               Container(
                 padding: EdgeInsets.only(top: 2),
                 height: 25,
-                width: 260,
-                child: text,
+                child: Text(text,
+                    style: TextStyle(color: Colors.black87, fontSize: 14)),
               )
             ],
           ),

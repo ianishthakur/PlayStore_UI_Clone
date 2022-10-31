@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:playstore_ui/common/route/route_generator.dart';
+import 'package:playstore_ui/pages/drag_page.dart';
 import 'package:playstore_ui/pages/home_Screen.dart';
 import 'package:playstore_ui/pages/splash_Screen.dart';
 
@@ -18,9 +19,11 @@ class PlayStore extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-         onGenerateRoute: RouteGenerator.generateRoute,
-        debugShowCheckedModeBanner: false,
-        navigatorKey: Nav.navKey,
-        initialRoute: Routes.root,);
+      onGenerateRoute: RouteGenerator.generateRoute,
+      debugShowCheckedModeBanner: false,
+      navigatorKey: Nav.navKey,
+      initialRoute: Routes.root,
+      //home: MyWidget(),
+    );
   }
 }
