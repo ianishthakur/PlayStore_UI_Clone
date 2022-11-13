@@ -5,8 +5,8 @@ import 'package:playstore_ui/common/route/routes.dart';
 import 'package:playstore_ui/common/searchPage.dart';
 import 'package:playstore_ui/pages/google_Acc.dart';
 
-class Example extends StatelessWidget {
-  const Example({Key? key, required this.tabController}) : super(key: key);
+class AppBarView extends StatelessWidget {
+  const AppBarView({Key? key, required this.tabController}) : super(key: key);
   final TabController tabController;
   @override
   Widget build(BuildContext context) {

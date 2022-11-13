@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
+
+
 class AppModel {
   // Image image;
   Image imagee;

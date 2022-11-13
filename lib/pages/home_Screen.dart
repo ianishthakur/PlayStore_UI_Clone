@@ -1,4 +1,9 @@
+import 'dart:async';
+
+import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:playstore_ui/common/commonTextField/model/app_Model.dart';
 import 'package:playstore_ui/common/constant/strings.dart';
 
@@ -14,11 +19,15 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
+  late StreamSubscription subscription;
+  var isDeviceConnected = false;
+  bool isAlertSet = false;
   late TabController _tabController;
   int ourCurrentIndex = 0;
 
   @override
   void initState() {
+    getConnectivity();
     super.initState();
     _tabController = TabController(initialIndex: 0, length: 4, vsync: this);
     List<AppModel> apps = AppUtils.appView();
@@ -26,6 +35,23 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
     _tabController.animateTo(1);
   }
+
+  getConnectivity() =>
+      subscription = Connectivity().onConnectivityChanged.listen(
+        (ConnectivityResult result) async {
+          isDeviceConnected = await InternetConnectionChecker().hasConnection;
+          if (!isDeviceConnected && isAlertSet == false) {
+            showDialogBox();
+            setState(() => isAlertSet = true);
+          }
+        },
+      );
+
+  // @override
+  // void dispose() {
+  //   subscription.cancel();
+  //   super.dispose();
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -118,4 +144,27 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       }
     });
   }
+
+  showDialogBox() => showCupertinoDialog<Strings>(
+        context: context,
+        builder: (BuildContext context) => CupertinoAlertDialog(
+          title: const Text("No Connection"),
+          content: const Text("Please cheak your internet connectivity"),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () async {
+                Navigator.pop(context);
+                setState(() => isAlertSet = false);
+                isDeviceConnected =
+                    await InternetConnectionChecker().hasConnection;
+                if (!isDeviceConnected) {
+                  showDialogBox();
+                  setState(() => isAlertSet = true);
+                }
+              },
+              child: const Text("OK"),
+            ),
+          ],
+        ),
+      );
 }

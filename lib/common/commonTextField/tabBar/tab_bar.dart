@@ -12,7 +12,8 @@ import '../../utils/google_Acc_utils.dart';
 import '../model/feature_Model.dart';
 
 class TabBarScreen extends StatelessWidget {
-  const TabBarScreen({Key? key, required this.tabController}) : super(key: key);
+  const 
+  TabBarScreen({Key? key, required this.tabController}) : super(key: key);
   final TabController tabController;
   @override
   Widget build(BuildContext context) {

@@ -8,23 +8,21 @@ class AppUtils {
   static List<AppModel> appView() {
     return [
       AppModel(
-        imagee: Image.network(
-Strings.urlUdemy    
-, ),
+        imagee: Image.network("https://www.freepnglogos.com/uploads/facebook-logo-icon/facebook-logo-icon-file-facebook-icon-svg-wikimedia-commons-4.png"),
         name: Strings.appUdemy,
         rating: Strings.appRate,
         dataType: Strings.datasugg,
       ),
       AppModel(
         imagee: Image.network(
-Strings.urlGoogleMeet      ),
+Strings.urlGoogleMeet),
         name: Strings.appGoogleMeet,
         rating: Strings.appRate,
         dataType: Strings.datasugg,
       ),
        AppModel(
         imagee: Image.network(
-Strings.urlWhatsapp        ),
+Strings.urlWhatsapp),
         name: Strings.appWhatsapp,
         rating: Strings.appRate,
          dataType: Strings.datasugg ,
@@ -32,7 +30,7 @@ Strings.urlWhatsapp        ),
      
         AppModel(
         imagee: Image.network(
-Strings.urlGoogleMeet      ),
+Strings.urlGoogleMeet),
         name: Strings.appGoogleMeet,
         rating: Strings.appRate,
         dataType: Strings.datasugg,
@@ -40,14 +38,14 @@ Strings.urlGoogleMeet      ),
     
       AppModel(
         imagee: Image.network(
-Strings.urlUdemy        ),
+Strings.urlUdemy),
         name: Strings.appUdemy,
         rating: Strings.appRate,
        dataType: Strings.datasugg,
       ),
     AppModel(
         imagee: Image.network(
-Strings.urlLightroom        ),
+Strings.urlLightroom),
         name: Strings.appLightroom,
         rating: Strings.appRate,
        dataType: Strings.datalow ,
@@ -55,21 +53,21 @@ Strings.urlLightroom        ),
     
       AppModel(
         imagee: Image.network(
-Strings.urlEsewa        ),
+Strings.urlEsewa),
         name: Strings.appesewa,
         rating: Strings.appRate,
          dataType: Strings.datalow ,
       ),
       AppModel(
         imagee: Image.network(
-Strings.urlGoogleMeet        ),
+Strings.urlGoogleMeet),
         name: Strings.appGoogleMeet,
         rating: Strings.appRate,
        dataType: Strings.datalow ,
       ),
       AppModel(
         imagee: Image.network(
-Strings.urlLightroom        ),
+Strings.urlLightroom),
         name: Strings.appLightroom,
         rating: Strings.appRate,
        dataType: Strings.datalow ,

@@ -8,4 +8,7 @@ class Assets {
   static const profile = _imagesPath + "profile.png";
   static const playstorelogo = _imagesPath + "playstorelogo.png";
   static const google = _imagesPath + "google.png";
+  static const placeholder = _imagesPath + "placeholder.png";
+
+
 }

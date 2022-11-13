@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:playstore_ui/common/constant/assets.dart';
 
 Widget buildListView(List apps) {
   return ListView.builder(
@@ -11,6 +12,15 @@ Widget buildListView(List apps) {
           margin: EdgeInsets.symmetric(horizontal: 10),
           child: Column(
             children: [
+              // FadeInImage(
+              //   placeholder: AssetImage(Assets.placeholder),
+              //   image: NetworkImage(apps[index]),
+              //   imageErrorBuilder: (context, a, b) {
+              //     return Text("Image could not be loaded");
+              //   },
+              // ),
+
+        
               ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: apps[index].imagee,
