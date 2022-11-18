@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
+import '../../../pages/homepage_utils.dart';
 import '../../constant/strings.dart';
 
 class TabViewBarScreen extends StatelessWidget {
@@ -76,6 +77,7 @@ class TabViewBarScreen extends StatelessWidget {
                 Container(
                   height: 160,
                   child: buildListView(sugglist),
+                  
                 ),
               ],
             ),
@@ -85,40 +87,40 @@ class TabViewBarScreen extends StatelessWidget {
     );
   }
 
-  Widget buildListView(List apps) {
-    return ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: apps.length,
-        itemBuilder: (context, index) {
-          return Container(
-            width: 90,
-            height: 90,
-            margin: EdgeInsets.symmetric(horizontal: 10),
-            child: Column(
-              children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: apps[index].imagee,
-                ),
-                Container(
-                  margin: EdgeInsets.only(top: 10),
-                  width: double.infinity,
-                  child: Text(
-                    apps[index].name,
-                    style: TextStyle(fontSize: 12),
-                    textAlign: TextAlign.start,
-                    textDirection: TextDirection.ltr,
-                  ),
-                ),
-                Row(
-                  children: [
-                    Text(apps[index].rating),
-                    Icon(Icons.star, size: 10.0)
-                  ],
-                )
-              ],
-            ),
-          );
-        });
-  }
+  // Widget buildListView(List apps) {
+  //   return ListView.builder(
+  //       scrollDirection: Axis.horizontal,
+  //       itemCount: apps.length,
+  //       itemBuilder: (context, index) {
+  //         return Container(
+  //           width: 90,
+  //           height: 90,
+  //           margin: EdgeInsets.symmetric(horizontal: 10),
+  //           child: Column(
+  //             children: [
+  //               ClipRRect(
+  //                 borderRadius: BorderRadius.circular(20),
+  //                 child: apps[index].imagee,
+  //               ),
+  //               Container(
+  //                 margin: EdgeInsets.only(top: 10),
+  //                 width: double.infinity,
+  //                 child: Text(
+  //                   apps[index].name,
+  //                   style: TextStyle(fontSize: 12),
+  //                   textAlign: TextAlign.start,
+  //                   textDirection: TextDirection.ltr,
+  //                 ),
+  //               ),
+  //               Row(
+  //                 children: [
+  //                   Text(apps[index].rating),
+  //                   Icon(Icons.star, size: 10.0)
+  //                 ],
+  //               )
+  //             ],
+  //           ),
+  //         );
+  //       });
+  // }
 }

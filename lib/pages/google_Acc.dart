@@ -17,8 +17,8 @@ class _GoogleAccState extends State<GoogleAcc> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 8, bottom: 8),
-      height: MediaQuery.of(context).size.height / 3 * 2,
+      padding: const EdgeInsets.only(top: 8),
+      height: MediaQuery.of(context).size.height * 0.71,
       // width: double.infinity,
       child: Column(
         children: [

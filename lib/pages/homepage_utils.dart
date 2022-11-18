@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:playstore_ui/common/constant/assets.dart';
 
@@ -12,19 +14,24 @@ Widget buildListView(List apps) {
           margin: EdgeInsets.symmetric(horizontal: 10),
           child: Column(
             children: [
-              // FadeInImage(
-              //   placeholder: AssetImage(Assets.placeholder),
-              //   image: NetworkImage(apps[index]),
-              //   imageErrorBuilder: (context, a, b) {
-              //     return Text("Image could not be loaded");
-              //   },
-              // ),
+              Image.network(
+                //placeholder: AssetImage(Assets.placeholder),
+                apps[index].imagee.image.url.toString(),
+                errorBuilder: (BuildContext context, Object exception,
+                    StackTrace? stackTrace) {
+                  if (exception is SocketException) {
+                    return Image.asset(Assets.placeholder);
+                  }
+                  return Text(exception.toString());
 
-        
-              ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: apps[index].imagee,
+                  // );
+                },
               ),
+
+              // ClipRRect(
+              //   borderRadius: BorderRadius.circular(20),
+              //   child: apps[index].imagee ?? Image.asset(Assets.placeholder),
+              // ),
               Container(
                 margin: EdgeInsets.only(top: 10),
                 width: double.infinity,
