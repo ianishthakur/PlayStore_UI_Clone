@@ -15,7 +15,6 @@ Widget buildListView(List apps) {
           child: Column(
             children: [
               Image.network(
-                //placeholder: AssetImage(Assets.placeholder),
                 apps[index].imagee.image.url.toString(),
                 errorBuilder: (BuildContext context, Object exception,
                     StackTrace? stackTrace) {
@@ -24,14 +23,9 @@ Widget buildListView(List apps) {
                   }
                   return Text(exception.toString());
 
-                  // );
+                
                 },
               ),
-
-              // ClipRRect(
-              //   borderRadius: BorderRadius.circular(20),
-              //   child: apps[index].imagee ?? Image.asset(Assets.placeholder),
-              // ),
               Container(
                 margin: EdgeInsets.only(top: 10),
                 width: double.infinity,

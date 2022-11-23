@@ -46,13 +46,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           }
         },
       );
-
-  // @override
-  // void dispose() {
-  //   subscription.cancel();
-  //   super.dispose();
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -148,8 +141,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   showDialogBox() => showCupertinoDialog<Strings>(
         context: context,
         builder: (BuildContext context) => CupertinoAlertDialog(
-          title: const Text("No Connection"),
-          content: const Text("Please cheak your internet connectivity"),
+          title: const Text(Strings.noConnection),
+          content: const Text(Strings.checkConnection),
           actions: <Widget>[
             TextButton(
               onPressed: () async {
@@ -162,7 +155,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   setState(() => isAlertSet = true);
                 }
               },
-              child: const Text("OK"),
+              child: const Text(Strings.ok),
             ),
           ],
         ),

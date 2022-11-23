@@ -94,4 +94,12 @@ class Strings {
       "https://www.freepnglogos.com/uploads/logo-ig-png/logo-ig-instagram-new-logo-vector-download-13.png";
   static const urlMicrosoft =
       "https://www.freepnglogos.com/uploads/microsoft-logo-image-23.png";
+
+  //Internet Connectivity
+
+  static const noConnection = "No Connection";
+    static const checkConnection = "Please check your internet connectivity";
+  static const ok = "OK";
+
+
 }
